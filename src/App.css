@@ -3,21 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0 20px;
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
-    "profile-pic name      language language"
-    "profile-pic name      language language"
-    "education   education interest interest"
-    "education   education interest interest"
-    "education   education interest interest"
-    "education   education chat     chat"
-    "education   education chat     chat";
+    "profile-pic name language language"
+    "profile-pic name language language"
+    "education education interest interest"
+    "education education interest interest"
+    "education education chat chat"
+    "education education chat chat";
   gap: 20px;
   padding: 50px;
   background-color: #ffffff;
@@ -30,17 +31,17 @@ body {
 }
 
 p {
-  font-size: 25px;
+  font-size: 18px; /* Adjusted font size */
 }
+
 h1 {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem; /* Adjusted font size */
 }
 
 .profile-pic {
   width: 100%;
   height: auto;
-  object-fit: cover;
   border-radius: 23px;
 }
 
@@ -56,14 +57,24 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Align to the left */
+  align-items: center;
+  text-align: center;
 }
+
 .name-1 {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0.5rem; /* Reduced space between "Hello I'm" and the name */
+  font-size: 1.25rem; /* Adjusted font size */
 }
+
+.name-2 {
+  text-align: center;
+  font-size: 1.75rem; /* Adjusted font size */
+}
+
 .name-3 {
   color: gray;
+  text-align: center;
+  font-size: 1rem; /* Adjusted font size */
 }
 
 .language {
@@ -79,7 +90,7 @@ h1 {
   border-radius: 100px;
   position: relative;
   display: flex;
-  height: 30px;
+  height: 25px; /* Adjusted height */
   width: 100%;
   margin-left: 10px;
 }
@@ -125,6 +136,7 @@ h1 {
 .education {
   grid-area: education;
 }
+
 .education-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -132,21 +144,25 @@ h1 {
 
 .education-boxes {
   border-radius: 23px;
-  padding: 20px 25px;
+  padding: 15px 20px; /* Adjusted padding */
   margin: 10px;
   transition: box-shadow 0.3s ease;
 }
+
 .education-boxes:hover {
   box-shadow: 5px 5px 10px rgba(36, 36, 36, 0.5);
   transform: rotate(5deg);
 }
+
 .education-boxes > p {
-  font-size: 1rem;
+  font-size: 0.875rem; /* Adjusted font size */
 }
+
 .first-box-education {
   background-color: #28d979;
   color: #ffffff;
 }
+
 .second-box-education {
   background-color: #ffffff;
 }
@@ -184,14 +200,20 @@ h1 {
   flex-direction: column;
   justify-content: space-around;
 }
+
 .chat > p:hover {
   transform: scale(1.02);
 }
+
 .chat-copy {
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
+  body {
+    margin: 0 10px;
+  }
+
   .container {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -203,36 +225,53 @@ h1 {
     padding: 20px;
   }
 
+  .items {
+    padding: 1rem;
+  }
+
   .profile-pic-container {
-    grid-area: profile-pic;
+    margin: 0 auto;
     width: 100%;
+    max-width: 150px;
   }
 
   .profile-pic {
     width: 100%;
     height: auto;
-    max-width: 100%;
-    max-height: auto;
   }
 
   .name {
-    grid-area: name;
-    justify-content: center;
-    margin-left: 10px;
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+    max-width: 150px;
   }
 
   .name-1 {
-    font-size: 1rem; /* Decrease font size for mobile */
-    margin-top: 1rem; /* Reduce margin on mobile */
-    margin-bottom: 1rem; /* Reduce margin on mobile */
+    font-size: 1rem; /* Adjusted font size */
+    margin-bottom: 0.5rem;
   }
 
   .name-2 {
-    font-size: 1.5rem; /* Decrease font size for mobile */
+    font-size: 1rem; /* Adjusted font size */
+    text-align: left;
   }
 
   .name-3 {
-    font-size: 1rem; /* Decrease font size for mobile */
+    font-size: 0.75rem; /* Adjusted font size */
+    text-align: left;
+  }
+
+  .language {
+    padding: 1rem;
+  }
+
+  .language > h1 {
+    margin-bottom: 1rem;
+  }
+
+  .language-divider {
+    margin-bottom: 1rem;
   }
 
   .language-item {
@@ -247,17 +286,5 @@ h1 {
   .progress {
     margin-left: 0;
     margin-top: 10px;
-  }
-
-  .items {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 20px;
   }
 }

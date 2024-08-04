@@ -18,7 +18,7 @@ export default function App() {
       <div className="profile-pic-container">
         <img
           className="profile-pic"
-          src="./public/assets/Profile-pic.png"
+          src="/assets/Profile-pic.png"
           alt="Profile-Pic"
         />
       </div>

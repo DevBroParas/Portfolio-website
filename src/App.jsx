@@ -25,7 +25,7 @@ export default function App() {
       {/* name  */}
       <div className="items name">
         <p className="name-1">Hello 👋🏻 I&apos;m</p>
-        <h1 className="name-2">Paras Yadav</h1>
+        <h1 className="name-2">Paras Don Yadav</h1>
         <p className="name-3">Front-end/React Developer</p>
       </div>
       {/* language  */}

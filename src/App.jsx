@@ -97,8 +97,7 @@ export default function App() {
           <p>Javascript</p>
           <p>React</p>
           <p>Github</p>
-          <p>node.js</p>
-          <p>MongoDB</p>
+          <p>Next js</p>
           <p>postman</p>
         </div>
       </div>
